@@ -1,0 +1,17 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Merizza Khan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33",
+    "pug": "^2.0.0-alpha6",
+    "shortid": "^2.2.8"
+  }
+}
