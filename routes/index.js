@@ -1,8 +1,15 @@
 var express = require("express");
 var mongo = require("mongodb");
-var url = "mongodb://localhost:27017/url";
 
 var router = express.Router();
+
+var url;
+var env = process.env.NODE_ENV;
+if(env === "development") {
+  url = "mongodb://localhost:27017/url";
+} else {
+  url = process.env.URL;
+}
 
 router.get("/", function(req, res) {
   res.render("index");

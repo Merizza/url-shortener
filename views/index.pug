@@ -1,3 +1,15 @@
 extends layout
+
 block content
-  h1 Works
+  h1 URL SHORTENER MICROSERVICE
+  div.stories
+    h3 User Stories
+    ul
+      li I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.
+      li If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.
+      li When I visit that shortened URL it will redirect me to my original link.
+  div.examples
+    h3 Example Usage:
+    code https://urlsh.glitch.me/link/https://www.gmail.com
+    h3 Example Output:
+    code { original_url: "https://www.gmail.com", short_url: "https://urlsh.glitch.me/your-shortened-url" }

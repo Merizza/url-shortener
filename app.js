@@ -20,6 +20,7 @@ app.use("/link", link);
 
 app.listen(port, function() {
   console.log("Server is up on port " + port);
+  console.log(process.env.NODE_ENV);
 });
 
 module.exports = app;

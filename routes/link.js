@@ -4,7 +4,13 @@ var shortid = require('shortid');
 var router = express.Router();
 var mongo = require("mongodb").MongoClient;
 
-var url = "mongodb://localhost:27017/url";
+var url;
+var env = process.env.NODE_ENV;
+if(env === "development") {
+  url = "mongodb://localhost:27017/url";
+} else {
+  url = process.env.URL;
+}
 
 router.get("/:url(*)", function(req, res) {
   
